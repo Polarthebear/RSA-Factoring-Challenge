@@ -1,0 +1,55 @@
+#!/usr/bin/python3
+
+import time
+import time
+
+def fact(num):
+    '''Accepts number as input.
+    Args:
+        num: interger input
+        Return: tuple of two factors if not prime and None if prime
+    '''
+    for i in range(2, int(num**0.5)+1):
+        if num % i == 0:
+            return (i, num//i)
+    return None
+
+if __name__ == "__main__":
+
+    '''read input file.
+    '''
+    if len(sys.argv) != 2:
+        print("Usage: factors <file>")
+        exit()
+
+
+    file_in = sys.argv[1]
+
+    try:
+        with open(file_in, 'r') as f:
+            lines = f.readlines()
+    except FileNotFoundError:
+        print("File not found")
+        exit()
+
+
+    time_start = time.time()
+
+    '''Loop over each line and call fact on each number.
+
+    if fact return tuple of factors
+    '''
+
+    for line in lines:
+        num = int(line.strip())
+        factors = fact(num)
+        if factors:
+            print(f"{num} ={factors[0]} * {factors[1]}")
+
+        '''if time exceed 5 sec,
+        exit program with err msg.
+        '''
+
+        if time.time() - time_start > 5:
+            print("Time limit exceeded")
+            exit()
