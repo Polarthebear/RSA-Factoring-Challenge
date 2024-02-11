@@ -12,4 +12,16 @@ The RSA Factoring Challenge was initiated by RSA Data Security in 1991. The chal
 
 It's worth noting that the specifics of the RSA Factoring Challenge may have evolved since then, and I recommend checking more recent sources for the latest information on any developments in this area.
 
+## Badges
+
+Add badges from somewhere like: [shields.io](https://shields.io/)
+
+This Challenge will be completed in Python
+
+[![python](https://img.shields.io/badge/Python-3.9-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org)
+
+
+## Author
+
+- [@Polarthebear](https://www.github.com/polarthebear)
 
